@@ -1,5 +1,5 @@
 import React from "react";
-// import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 // reactstrap components
 import {
   Collapse,
@@ -8,19 +8,19 @@ import {
   Container,
 } from "reactstrap";
 import LogoutButton from "../LogOut";
-// import Loading from "components/Loading";
+import Loading from "components/Loading";
 
 
 
 function FixedTransparentNavbar(props) {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
-  // const {
-    // user,
-    // isAuthenticated,
-    // returnTo,
-    // loginWithRedirect,
-    // logout,
-  // } = useAuth0();
+  const {
+    user,
+    isAuthenticated,
+    returnTo,
+    loginWithRedirect,
+    logout,
+  } = useAuth0();
 
 
   return (
@@ -61,11 +61,11 @@ function FixedTransparentNavbar(props) {
           </div>
           <Collapse isOpen={collapseOpen} navbar>
             <Nav className="ml-auto" id="ceva" navbar>
-              {/* { isAuthenticated ?   */}
+              { isAuthenticated ?  
               <LogoutButton />
-              {/* :
+               :
               <Loading />
-                } */}
+                } 
             </Nav>
           </Collapse>
         </Container>

@@ -7,7 +7,7 @@ import {
   Row,
   Col
 } from "reactstrap";
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 // import { Link } from "react-router-dom";
 
 import MyLoginFormComponent from "../components/SignUpForm"
@@ -15,18 +15,18 @@ import MyLoginFormComponent from "../components/SignUpForm"
 // core components
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js";
 import FooterDefault from "components/Footers/FooterDefault";
-// import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 
 function SignUp(props) {
-  // const {
-  //   // user,
-  //   isAuthenticated,
-  //   // returnTo,
-  //   // loginWithRedirect,
-  //   // logout,
-  // } = useAuth0();
+  const {
+    // user,
+    isAuthenticated,
+    // returnTo,
+    // loginWithRedirect,
+    // logout,
+  } = useAuth0();
   
 
   React.useEffect(() => {
@@ -62,7 +62,7 @@ function SignUp(props) {
           }}
         ></div>
         <div className="content">
-          {/* {isAuthenticated ? */}
+          {isAuthenticated ?
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="6" lg="4">
@@ -145,7 +145,6 @@ function SignUp(props) {
               </Col>
             </Row>
           </Container> 
-          {/* 
           :
           <Container>
           <div className="text-center">
@@ -156,13 +155,13 @@ function SignUp(props) {
               color="success"
               type="button"
             >
-            <Link to="/" >
+            {/* <Link to="/" > */}
                   <i className="now-ui-icons users_circle-08"></i>
               Ingresar
-            </Link>
+            {/* </Link> */}
           </Button>
-          </Container> */}
-          {/* } */}
+          </Container> }
+          
         </div>
         </div>
         <FooterDefault />

@@ -1,18 +1,18 @@
 import { useForm, $Form, $Number, $Text, $Select, $Password, $Button, CustomField, Valid, Invalid  } from '@tdc-cl/x-form';
 // import { createTodo, getTodos } from '../api/todos-api'
-// import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 // import { FeedContent } from 'semantic-ui-react';
 
 
 function MyLoginFormComponent() {
 
-    // const {
-        // user,
-        // isAuthenticated,
-        // returnTo,
-        // loginWithRedirect,
-        // logout,
-    //   } = useAuth0();
+    const {
+        user,
+        isAuthenticated,
+        returnTo,
+        loginWithRedirect,
+        logout,
+      } = useAuth0();
 
     const $Edad = CustomField.extends($Number).with({
         validate(value) {

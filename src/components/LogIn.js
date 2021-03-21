@@ -2,8 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
-// import { useAuth0 } from "@auth0/auth0-react";
-import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+// import { Link } from "react-router-dom";
 
 
 
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LoginButton() {
   const classes = useStyles();
-  // const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect } = useAuth0();
   
   let url = "url(" + require("../assets/img/fig2.png").default + ")";
   let title = 'Registrate';
@@ -92,7 +92,7 @@ export default function LoginButton() {
 
   return (
     <div className={classes.root}>
-        <Link to="/registro" >
+        {/* <Link to="/registro" > */}
         <ButtonBase
           focusRipple
           key={title}
@@ -101,7 +101,7 @@ export default function LoginButton() {
           style={{
             width: width,
           }}
-          // onClick={() => loginWithRedirect()}
+          onClick={() => loginWithRedirect()}
         >
 
           <span
@@ -123,7 +123,7 @@ export default function LoginButton() {
             </Typography>
           </span>
         </ButtonBase>
-        </Link>
+        {/* </Link> */}
     </div>
   );
 }
