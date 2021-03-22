@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LoginButton() {
   const classes = useStyles();
-  const { loginWithRedirect } = useAuth0();
+  // const { loginWithRedirect } = useAuth0();
   
   let url = "url(" + require("../assets/img/fig2.png").default + ")";
   let title = 'Registrate';
