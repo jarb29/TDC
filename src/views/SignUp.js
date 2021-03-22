@@ -7,24 +7,24 @@ import {
   Row,
   Col
 } from "reactstrap";
-// import Button from '@material-ui/core/Button';
-// import { Link } from "react-router-dom";
+import Button from '@material-ui/core/Button';
+import { Link } from "react-router-dom";
 
 import MyLoginFormComponent from "../components/SignUpForm"
 
 // core components
 import FixedTransparentNavbar from "components/Navbars/FixedTransparentNavbar.js";
 import FooterDefault from "components/Footers/FooterDefault";
-// import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 
 function SignUp(props) {
-  // const {
+  const {
 
-  //   isAuthenticated,
+    isAuthenticated,
 
-  // } = useAuth0();
+  } = useAuth0();
   
   React.useEffect(() => {
     document.body.classList.add("signup-page");
@@ -36,7 +36,7 @@ function SignUp(props) {
     };
   });
 
-  // console.log( isAuthenticated, "la autenticacion")
+  console.log( isAuthenticated, "la autenticacion")
 
 
 
@@ -61,7 +61,7 @@ function SignUp(props) {
           }}
         ></div>
         <div className="content">
-          {/* {isAuthenticated ? */}
+          {isAuthenticated ?
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="6" lg="4">
@@ -144,22 +144,22 @@ function SignUp(props) {
               </Col>
             </Row>
           </Container> 
-          {/* // :
-          // <Container>
-          // <div className="text-center">
-          // ""Usted no se encuentra registrado click en""
-          // </div>
-          // <Button
-          //     className="btn-round"
-          //     color="success"
-          //     type="button"
-          //   >
-          //   <Link to="/" >
-          //         <i className="now-ui-icons users_circle-08"></i>
-          //     Ingresar
-          //   </Link>
-          // </Button>
-          // </Container> } */}
+           :
+           <Container>
+          <div className="text-center">
+          ""Usted no se encuentra registrado click en""
+           </div>
+           <Button
+              className="btn-round"
+              color="success"
+              type="button"
+            >
+            <Link to="/" >
+                  <i className="now-ui-icons users_circle-08"></i>
+              Ingresar
+            </Link>
+          </Button>
+          </Container> }
           
         </div>
         </div>
