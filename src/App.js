@@ -8,7 +8,7 @@ import "assets/scss/now-ui-kit.scss";
 import "assets/demo/demo.css";
 import "assets/demo/react-demo.css";
 import "assets/demo/nucleo-icons-page-styles.css";
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "./components/LogIn"
 // pages
 
@@ -21,22 +21,22 @@ import SingUp from "./views/SignUp"
 
 function App() {
 
-  const {
+  // const {
     // user,
-    isAuthenticated,
+    // isAuthenticated,
     // returnTo,
     // loginWithRedirect,
     // logout,
-  } = useAuth0();
+  // } = useAuth0();
 
-  console.log(isAuthenticated, "la autenticacion")
+  // console.log(isAuthenticated, "la autenticacion")
 
 
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/" render={props => <LoginButton {...props} />} />
-          <Route path="/login" render={props => <SingUp {...props} />} />
+          <Route path="/registro" render={props => <SingUp {...props} />} />
         </Switch>
       </BrowserRouter>
     )

@@ -57,11 +57,11 @@ function FixedTransparentNavbar(props) {
           </div>
           <Collapse isOpen={collapseOpen} navbar>
             <Nav className="ml-auto" id="ceva" navbar>
-              { isAuthenticated ?  
+              {/* { isAuthenticated ?   */}
               <LogoutButton />
-               :
+               {/* :
               <Loading />
-                } 
+                }  */}
             </Nav>
           </Collapse>
         </Container>
