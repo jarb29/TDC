@@ -21,14 +21,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 function SignUp(props) {
   const {
-    // user,
+
     isAuthenticated,
-    // returnTo,
-    // loginWithRedirect,
-    // logout,
+
   } = useAuth0();
   
-
   React.useEffect(() => {
     document.body.classList.add("signup-page");
     document.body.classList.add("sidebar-collapse");
