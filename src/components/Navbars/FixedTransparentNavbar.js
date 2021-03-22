@@ -15,11 +15,7 @@ import Loading from "components/Loading";
 function FixedTransparentNavbar(props) {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const {
-    user,
-    isAuthenticated,
-    returnTo,
-    loginWithRedirect,
-    logout,
+    isAuthenticated
   } = useAuth0();
 
 
