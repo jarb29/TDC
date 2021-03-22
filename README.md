@@ -1,7 +1,7 @@
 # TDC
 Entrevista con TDC 
 
-Install:
-Run: npm Install.
+To get the project going. 
+Run: (npm Install) on your terminal, that would do the trick.....
 
 
