@@ -36,7 +36,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" render={props => <LoginButton {...props} />} />
-          <Route path="/login" render={props => <SingUp {...props} />} />
+          <Route path="/registro" render={props => <SingUp {...props} />} />
         </Switch>
       </BrowserRouter>
     )
