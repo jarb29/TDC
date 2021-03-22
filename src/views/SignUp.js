@@ -8,7 +8,7 @@ import {
   Col
 } from "reactstrap";
 import Button from '@material-ui/core/Button';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import MyLoginFormComponent from "../components/SignUpForm"
 
@@ -38,6 +38,8 @@ function SignUp(props) {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+
+  console.log( isAuthenticated, "la autenticacion")
 
 
 
@@ -155,10 +157,10 @@ function SignUp(props) {
               color="success"
               type="button"
             >
-            {/* <Link to="/" > */}
+            <Link to="/" >
                   <i className="now-ui-icons users_circle-08"></i>
               Ingresar
-            {/* </Link> */}
+            </Link>
           </Button>
           </Container> }
           
