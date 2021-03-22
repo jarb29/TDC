@@ -4,7 +4,7 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import App from './App';
 
 
-const uri='http://localhost:3000/login'
+const uri='http://tdc-r1g2pm6l3-jarb29.vercel.app/login'
 
 ReactDOM.render(
   <Auth0Provider
