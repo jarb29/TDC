@@ -8,15 +8,15 @@ import {
   Container,
 } from "reactstrap";
 import LogoutButton from "../LogOut";
-import Loading from "components/Loading";
+// import Loading from "components/Loading";
 
 
 
 function FixedTransparentNavbar(props) {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
-  const {
-    isAuthenticated
-  } = useAuth0();
+  // const {
+  //   isAuthenticated
+  // } = useAuth0();
 
 
   return (
